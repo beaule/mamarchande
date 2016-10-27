@@ -18,3 +18,10 @@ function renderProducts(listOfProducts){
 		products: listOfProducts				
 	});	
 }
+
+function addProduct(jsonRecord){
+	myBill= new Bill();
+	myProduct=new Product();
+	myProduct.initfromJsonRecord(jsonRecord);
+	myBill.addProduct(myProduct);
+}

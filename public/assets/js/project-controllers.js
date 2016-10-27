@@ -1,18 +1,18 @@
-//var baseUrl="http://localhost:3000/stub/";
-//var apiKey="";	
- var baseUrl="https://api.airtable.com/v0/apphR8QJcnOdxmhcR/";	
- var apiKey="api_key=keyO4Vqd0OzTgJ0Ml";
-
 //encodePurchasesController
-function EncodePurchasesController(){	
-	this.categoriesCollection=new CategoriesCollection();
-	this.productsCollection=new ProductsCollection();
-}
+let instance=null;
+class EncodePurchasesController{
+	constructor(){
+		if(!instance)
+			instance=this;
+		this.categoriesCollection=new CategoriesCollection();
+		this.productsCollection=new ProductsCollection();
+		return instance;
+	}
+	loadListOfCategories(){		
+		this.categoriesCollection.getListOfCategories(renderCategories);
+	}
 
-EncodePurchasesController.prototype.loadListOfCategories = function (){		
-	this.categoriesCollection.getListOfCategories(renderCategories);
-}
-
-EncodePurchasesController.prototype.loadListOfProducts = function (categoryId){		
-	this.productsCollection.getListOfProducts(renderProducts,categoryId);
+	loadListOfProducts (categoryId){		
+		this.productsCollection.getListOfProducts(renderProducts,categoryId);
+	}
 }

@@ -1,29 +1,30 @@
 {
-    "records": [
-        {
-            "id": "rec8nxT9zDBWjMjkq",
-            "fields": {
-                "Name": "Philadelphia",
-                "Id": 1,
-                "categoryId": [
-                    "recQ2tQCIyablX0CF"
-                ],
-                "Image": "https://source.unsplash.com/pa0rr3rVB-U/1450x750"
-            },
-            "createdTime": "2016-10-26T18:43:45.079Z"
-        },
-        {
-            "id": "recXzgpcaqDu4dSyl",
-            "fields": {
-                "Name": "Saucisse",
-                "Id": 2,
-                "categoryId": [
-                    "recwAtIQpOlbHelyr"
-                ],
-                "Image": "https://source.unsplash.com/pa0rr3rVB-U/1450x750"
-            },
-            "createdTime": "2016-10-26T18:43:45.079Z"
-        }
-    ],
-    "offset": "recXzgpcaqDu4dSyl"
+  "records": [
+    {
+      "id": "rec8nxT9zDBWjMjkq",
+      "fields": {
+        "Id": 1,
+        "Image": "https://source.unsplash.com/pa0rr3rVB-U/1450x750",
+        "categoryId": [
+          "recQ2tQCIyablX0CF"
+        ],
+        "Name": "Philadelphia",
+        "Price": 1
+      },
+      "createdTime": "2016-10-26T18:43:45.000Z"
+    },
+    {
+      "id": "recXzgpcaqDu4dSyl",
+      "fields": {
+        "Id": 2,
+        "Image": "https://source.unsplash.com/pa0rr3rVB-U/1450x750",
+        "categoryId": [
+          "recwAtIQpOlbHelyr"
+        ],
+        "Name": "Saucisse",
+        "Price": 1
+      },
+      "createdTime": "2016-10-26T18:43:45.000Z"
+    }
+  ]
 }

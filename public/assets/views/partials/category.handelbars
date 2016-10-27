@@ -1,5 +1,5 @@
 <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">
+    <button type="button" class="btn btn-default" onclick="let encodePurchasesController= new EncodePurchasesController();	encodePurchasesController.loadListOfProducts( {{this.fields.Id}});">
         <div class="icon icon-primary big-icon" >
             <i class="material-icons big-icon" style="font-size:90px;">{{this.fields.Image}}</i>
         </div>    
