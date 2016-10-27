@@ -1,7 +1,7 @@
-const baseUrl="http://localhost:3000/stub/";
-const apiKey="";	
-//var baseUrl="https://api.airtable.com/v0/apphR8QJcnOdxmhcR/";	
-//var apiKey="api_key=keyO4Vqd0OzTgJ0Ml";
+//const baseUrl="http://localhost:3000/stub/";
+//const apiKey="";	
+var baseUrl="https://api.airtable.com/v0/apphR8QJcnOdxmhcR/";	
+var apiKey="api_key=keyO4Vqd0OzTgJ0Ml";
 
 
 
