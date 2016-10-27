@@ -1,6 +1,6 @@
 <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">
-        <div class="icon icon-primary big-icon" >
+        <div class="icon icon-primary big" >
             <i class="material-icons big-icon" style="font-size:90px;">{{this.fields.Image}}</i>
         </div>    
         {{this.fields.Name}}
