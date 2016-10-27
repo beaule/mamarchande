@@ -1,236 +1,47 @@
 .wrapper > .header{
-    min-height: 100px;
+    min-height: 20px;
     background-position: center center;
     background-size: cover;
 }
 .main{
-    background: #FFFFFF;
+    background: $white-color;
     position: relative;
     z-index: 3;
 
-}
-.main-raised{
-    margin: -60px 30px 0px;
-    border-radius: $border-radius-base * 2;
-    @include shadow-16dp();
 }
 
 .title{
     font-weight: $font-weight-bold;
     color: $black-color;
+    font-family: Sacramento;
+    font-size: 100px;
 }
 h2.title{
     margin-bottom: $margin-base * 2;
 }
 
-.description{
-    color: $gray-light;
+.big-icon {
+ font-size: 30px;
 }
 
-.description-for-whom{
-    font-size:15px;
-}
-
-
-.header-filter{
-    position: relative;
-
-    &:after{
-        position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 100%;
-        display: block;
-        left: 0;
-        top: 0;
-        content: "";
-        background-color: rgba(0,0,0,.4);
-    }
-
-    .container{
-        z-index: 2;
-        position: relative;
-    }
-}
-
-.features{    
-    margin-left: 100px;
-    margin-right: 100px;        
-}
-
-.nav-align-center{
-    text-align: center;
-
-    .nav-pills{
-        display: inline-block;
-    }
-}
-.navbar-absolute{
-    position: absolute;
-    width: 100%;
-    padding-top: 10px;
-    z-index: 1031;
-}
-
-// style for the landing page
-.landing-page{
+// style for the home page
+.home-page{
+    background: $white-color;
     .header{
-        height: 100vh;
-
-        .container{
-            padding-top: 26vh;
-            color: #FFFFFF;
-        }
-
-        .share{
-            margin-top: 150px;
-        }
+        height: 100px;
         h1{
             font-weight: 600;
         }
-        .title{
-            color: $white-color;
-        }
+    }
+
+    .container{
+            padding-top: 2vh; 
+            padding-left: 2vh;
+            padding-right: 2vh;  
+
     }
 
     .wrapper{
-        background: $grey-200;
-    }
-    
-    .navbar-transparent{
-        background-color: rgba(0,0,0,.4);
-        padding-top: 10px;
-        border-radius: 0;
-        color: $white-color;
-    }  
-    
-    .section-features{
-         background: $white-color;
-    }
-
-    .section-for-whom{
-         background: $white-color;
-    }
-
-    .section-get-ready-to-ride{
-        height: 100vh;
-
-        .title{
-            margin-top:100px;
-            color: $white-color;
-        }
-
-        .description{
-            color: $white-color;
-        }
-        
-    }
-        
-    .section-contact-us{
-        background: $grey-600;
-        color:$grey-500;
-        .btn-contact-us{
-            background-color:$grey-500;
-            color:$grey-300;
-        }        
-    } 
-
-    .vcenter{
-         display: inline-block;
-        vertical-align: middle;
-        float: none;
-    }
-
-   
-    .info-title{
-        color:$brand-primary;
-    }
-
-    .step1-example-image{
-        height: 75vh;
-        width:67vh;
-        background-image: url('/assets/img/step1.jpg');
-    }
-
-    .step2-example-image{
-        height: 53vh;
-        width:78vh;
-        background-image: url('/assets/img/step2.png');
-    }
-
-    .step3-example-image{
-        height: 45vh;
-        width:67vh;
-        background-image: url('/assets/img/step3.jpg');
-    }
-    
-}
-
-
-@media (max-width: 991px){
-    .landing-page .header{
-        height: auto;
-        min-height: 100vh;
-
-        .container{
-            padding-bottom: 70px
-        }
-    }
-}
-
-@media (max-width: 768px){
-    .footer{
-        .copyright{
-            display: inline-block;
-            text-align: center;
-            padding: 10px 0;
-            float: none !important;
-            width: 100%;
-
-        }
-    }
-
-    .navbar.navbar-transparent{
-        background-color: rgba(0,0,0,.4);
-        padding-top: 10px;
-        border-radius: 0;
+        background: $white-color;
     }    
-
-    .main-raised{
-        margin-left: 10px;
-        margin-right: 10px;
-    }   
-}
-
-
-
-.logo-container .logo{
-    overflow: hidden;        
-    width: 32px;
-    margin-top: 7px;
-    float: left;
-}
-
-.logo-container .brand{    
-    font-size: 20px;
-    color: $brand-primary;
-    line-height: 18px;
-    float: left;
-    margin-left: 5px;
-    margin-top: 16px;
-    width: 100px;
-    height: 40px;
-    text-align: left;    
-}
-
-.logo-container .logo img{
-    width: 100%;
-}
-
-.strava-badge-follow { 
-    margin-top:-1px; 
-}
-
-.big-icon{
- font-size: 30px;
 }

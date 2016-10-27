@@ -1,7 +1,7 @@
 {
-  "name": "just-ride-it",
+  "name": "mamarchande",
   "version": "0.1.0",
-  "description": "Prepare your next ride",
+  "description": "Achete & vend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -24,11 +24,6 @@
 	  "winston": "^2.2.0",
     "express-winston-middleware": "^0.1.0",
     "node-rest-client" : "^2.0.1",
-	  "strava-v3" :"^1.12.1",
-	  "pg-promise" : "^5.3.3",
-    "connect-ensure-login": "^0.1.1",
-    "passport": "^0.2.2",
-	  "passport-strava": "^0.2.0",
     "airtable": "^0.4.2"
   },
   "devDependencies": {

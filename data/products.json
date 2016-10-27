@@ -1,0 +1,29 @@
+{
+    "records": [
+        {
+            "id": "rec8nxT9zDBWjMjkq",
+            "fields": {
+                "Name": "Philadelphia",
+                "Id": 1,
+                "categoryId": [
+                    "recQ2tQCIyablX0CF"
+                ],
+                "Image": "https://source.unsplash.com/pa0rr3rVB-U/1450x750"
+            },
+            "createdTime": "2016-10-26T18:43:45.079Z"
+        },
+        {
+            "id": "recXzgpcaqDu4dSyl",
+            "fields": {
+                "Name": "Saucisse",
+                "Id": 2,
+                "categoryId": [
+                    "recwAtIQpOlbHelyr"
+                ],
+                "Image": "https://source.unsplash.com/pa0rr3rVB-U/1450x750"
+            },
+            "createdTime": "2016-10-26T18:43:45.079Z"
+        }
+    ],
+    "offset": "recXzgpcaqDu4dSyl"
+}

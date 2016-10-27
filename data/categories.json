@@ -1,0 +1,36 @@
+{
+    "records": [
+        {
+            "id": "recQ2tQCIyablX0CF",
+            "fields": {
+                "Id": 1,
+                "Name": "Desserts",
+                "products": [
+                    "rec8nxT9zDBWjMjkq"
+                ],
+                "Image": "cake"
+            },
+            "createdTime": "2016-10-25T13:44:56.000Z"
+        },
+        {
+            "id": "recwAtIQpOlbHelyr",
+            "fields": {
+                "Id": 2,
+                "Name": "Legumes",
+                "products": [
+                    "recXzgpcaqDu4dSyl"
+                ]
+            },
+            "createdTime": "2016-10-25T13:44:56.000Z"
+        },
+        {
+            "id": "recSVIMuJwZEou6Gm",
+            "fields": {
+                "Id": 3,
+                "Name": "Viandes"
+            },
+            "createdTime": "2016-10-25T13:44:56.000Z"
+        }
+    ],
+    "offset": "recSVIMuJwZEou6Gm"
+}
