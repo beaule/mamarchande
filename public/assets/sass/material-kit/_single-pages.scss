@@ -1,5 +1,5 @@
 .wrapper > .header{
-    min-height: 20px;
+    min-height: 40px;
     background-position: center center;
     background-size: cover;
 }
@@ -28,7 +28,7 @@ h2.title{
 .home-page{
     background: $white-color;
     .header{
-        height: 100px;
+        height: 150px;
         h1{
             font-weight: 600;
         }

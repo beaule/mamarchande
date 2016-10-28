@@ -25,8 +25,8 @@ class ProductsCollection{
 		this._collectionOfProducts=new Array();
 	}
 
-	getListOfProducts(callback,categoryId){		
-		$.getJSON( baseUrl+"products?filterByFormula=(Id="+categoryId+")&"+apiKey, function(data) {
+	getListOfProducts(callback,categoryId){						
+		$.getJSON( baseUrl+"products?filterByFormula=(categoryId="+categoryId+")&"+apiKey, function(data) {
 			this._collectionOfProducts=data.records;				
 			callback.call(this,data.records);
 		});	
