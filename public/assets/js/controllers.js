@@ -9,10 +9,18 @@ class EncodePurchasesController{
 		return instance;
 	}
 	loadListOfCategories(){		
-		this.categoriesCollection.getListOfCategories(renderCategories);
+		this.categoriesCollection.getCollectionOfCategories(renderCategories);
 	}
 
 	loadListOfProducts (categoryId){		
 		this.productsCollection.getListOfProducts(renderProducts,categoryId);
+	}
+
+	addProductToBill (productId){		
+		//this.productsCollection.getListOfProducts(renderProducts,categoryId);
+		let myBill= new Bill();
+		var myProduct=new Product(productId,"Product1","","1","1");						
+		myBill.addProduct(myProduct);		
+		renderBill(myBill);
 	}
 }

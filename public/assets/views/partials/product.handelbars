@@ -1,6 +1,6 @@
 <div class="col-md-4">
     <div class="thumbnail">
-        <a href="javascript:addProduct('{{this.fields}}');">
+        <a href="javascript:product_onclick('{{this.fields.Id}}');">
         <img src="{{this.fields.Image}}" />
         <div class='number'>
             <h3>{{this.fields.Name}}</h3>

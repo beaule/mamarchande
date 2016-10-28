@@ -1,0 +1,5 @@
+<div class="col-md-4">
+xc
+   {{this.product.name}}
+   {{this.quantity}}
+</div> 

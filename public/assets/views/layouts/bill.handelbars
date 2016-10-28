@@ -1,0 +1,3 @@
+{{#each billLines }}
+    {{> bill-line }}
+{{/each}}  

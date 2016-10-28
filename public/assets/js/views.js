@@ -4,24 +4,31 @@ $.handlebars({
     templateExtension: 'handelbars',
 	partialPath: 'assets/views/partials',
     partialExtension: 'handelbars',
-	partials:['category','product']
+	partials:['category','product','bill-line']
 });
 
+//categories view rendering & events
 function renderCategories(listOfCategories){		
 	$('#categories').render('categories', {
 		categories: listOfCategories				
 	});	
 }
 
+//products view rendering & events
 function renderProducts(listOfProducts){		
 	$('#products').render('products', {
 		products: listOfProducts				
 	});	
 }
 
-function addProduct(jsonRecord){
-	myBill= new Bill();
-	myProduct=new Product();
-	myProduct.initfromJsonRecord(jsonRecord);
-	myBill.addProduct(myProduct);
+function product_onclick(productId){
+	let encodePurchasesController= new EncodePurchasesController();
+	encodePurchasesController.addProductToBill(productId);	
+}
+
+//bill view rendering & events
+function renderBill(bill){			
+	$('#bill').render('bill', {
+		billLines: bill.collectionOfProducts			
+	});	
 }
