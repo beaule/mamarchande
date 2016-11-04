@@ -6,7 +6,10 @@
  * Module dependencies.
  * @private
  ************************************/
+var base = require('airtable').base('apphR8QJcnOdxmhcR');
 var EndPointHelper = require('../lib/endpoint-helper');
+var Logger = require('../lib/logger');
+var fs=require("fs");
 
 /***********************************
  * Private functions
@@ -29,11 +32,56 @@ function renderHome(req,res){
   });  
 }
 
+/**
+ * render stub categories
+ *
+ * @param {req} request
+ * @param {res} response
+ */
+function renderCategories(req,res){
+  if(process.env.ENDPOINT_LOCATION_LOCAL==1){
+    fs.readFile("data/categories.json",'utf8',function(err,data){
+      if (err)
+        Logger.getLogger().error(err.stack);
+      else 
+        res.send(data);
+    }); 
+  }
+  else{
+    base('categories').select().eachPage(function page(records, fetchNextPage) {
+        res.send(data);       
+    });
+  }
+}
+
+/**
+ * render stub products
+ *
+ * @param {req} request
+ * @param {res} response
+ */
+function renderProducts(req,res){
+  if(process.env.ENDPOINT_LOCATION_LOCAL){
+    fs.readFile("data/products.json",'utf8',function(err,data){
+      if (err)
+        Logger.getLogger().error(err.stack);
+      else 
+        res.send(data);
+    });
+  } 
+}
+
 /***********************************
  * Module exports.
  ************************************/
 module.exports={
     home :function(req, res) {
       renderHome(req,res);
+    },
+     categories :function(req, res) {
+      renderCategories(req,res);
+    },
+    products :function(req, res) {
+      renderProducts(req,res);
     }
 }

@@ -1,3 +1,7 @@
 {{#each billLines }}
-    {{> bill-line }}
+    <tr>
+        <td>{{this.quantity}}</td>
+        <td>{{this.product.name}}</td>       
+        <td class="text-primary">$36,738</td>
+    </tr>   
 {{/each}}  

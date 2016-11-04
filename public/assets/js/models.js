@@ -1,37 +1,49 @@
-//const baseUrl="http://localhost:3000/stub/";
-//const apiKey="";	
-var baseUrl="https://api.airtable.com/v0/apphR8QJcnOdxmhcR/";	
-var apiKey="api_key=keyO4Vqd0OzTgJ0Ml";
-
-
+const baseUrl="/";	
 
 //categories
 class CategoriesCollection{
 	constructor(){
-		this._collectionOfCategories=new Array();
+		this._collection=new Array();
 	}
 
-	getCollectionOfCategories(callback){		
-		$.getJSON(baseUrl+"categories?"+apiKey, function(data) {
-			this._collectionOfCategories=data.records;				
-			callback.call(this,data.records);
-		});	
+	get collection(){
+		return this._collection;
+	}
+	
+	loadCollection(callback){
+		if(this._collection.length==0){
+			$.getJSON( baseUrl+"categories?", function(data) {
+			this._collection=data.records;						
+			callback(data.records);
+			});	
+		}			
+		else
+			callback.call();
 	}
 }
 
 //products
 class ProductsCollection{
 	constructor(){
-		this._collectionOfProducts=new Array();
+		this._collection=new Array();
 	}
 
-	getListOfProducts(callback,categoryId){						
-		$.getJSON( baseUrl+"products?filterByFormula=(categoryId="+categoryId+")&"+apiKey, function(data) {
-			this._collectionOfProducts=data.records;				
-			callback.call(this,data.records);
-		});	
+	get collection(){
+		return this._collection;
+	}
+	
+	loadCollection(callback,categoryId){
+		if(this._collection.length==0){
+			$.getJSON( baseUrl+"products?filterByFormula=(categoryId="+categoryId+")", function(data) {
+			this._collection=data.records;											
+			callback(data.records,categoryId);
+			});	
+		}			
+		else
+			callback.call(this._collection,categoryId);
 	}
 }
+
 
 class Product{
 	constructor(id,name,image,categoryId,price){

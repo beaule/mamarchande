@@ -4,7 +4,7 @@ $.handlebars({
     templateExtension: 'handelbars',
 	partialPath: 'assets/views/partials',
     partialExtension: 'handelbars',
-	partials:['category','product','bill-line']
+	partials:[]
 });
 
 //categories view rendering & events
@@ -12,6 +12,11 @@ function renderCategories(listOfCategories){
 	$('#categories').render('categories', {
 		categories: listOfCategories				
 	});	
+}
+
+function category_onclick(categoryId){	
+	let encodePurchasesController= new EncodePurchasesController();		
+	encodePurchasesController.loadListOfProducts(categoryId);
 }
 
 //products view rendering & events
@@ -31,4 +36,11 @@ function renderBill(bill){
 	$('#bill').render('bill', {
 		billLines: bill.collectionOfProducts			
 	});	
+}
+
+//speech
+function speech(text) {	
+    var msg = new SpeechSynthesisUtterance(text);
+    msg.rate = 0.5;
+    window.speechSynthesis.speak(msg);
 }

@@ -1,3 +1,9 @@
 {{#each products }}
-    {{> product }}
+    <div class="col-md-2">
+        <div class="thumbnail">
+            <a href="javascript:product_onclick('{{this.fields.Id}}');">
+                <img src="{{this.fields.Image}}" />            
+            </a>
+        </div>
+    </div>
 {{/each}}  

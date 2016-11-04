@@ -69,13 +69,8 @@ app.use(Logger.getRequestLogger());
 // home controller
 var homeController = require('./controllers/home');
 app.get('/', homeController.home);
-
-// stub controller starts only if usage of local API endpoint
-if(process.env.ENDPOINT_LOCATION_LOCAL){
-  var stubController = require('./controllers/stub');
-  app.get('/stub/categories', stubController.categories);
-  app.get('/stub/products', stubController.products);
-}
+app.get('/categories', homeController.categories);
+app.get('/products', homeController.products);
 
 /***********************************
  * Environment, Exception handling & logging

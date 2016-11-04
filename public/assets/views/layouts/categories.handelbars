@@ -1,5 +1,10 @@
-<div class="btn-group btn-group-lg btn-group-justified" role="group" aria-label="categories">
-  {{#each categories }}
-    {{> category }}
-  {{/each}}  
-</div>
+<ul class="nav nav-pills" role="tablist">
+    {{#each categories}}		
+    <li>
+        <a href="#" onclick="categoryControllerInstance.category_onclick('{{this.fields.Id}}')" role="tab" data-toggle="tab">
+            <i class="material-icons">{{this.fields.Image}}</i>
+            {{this.fields.Name}}
+        </a>
+    </li>
+    {{/each}}
+</ul>
