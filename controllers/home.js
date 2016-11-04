@@ -49,7 +49,7 @@ function renderCategories(req,res){
   }
   else{
     base('categories').select().eachPage(function page(records, fetchNextPage) {
-        res.send(data);       
+        res.send(records);       
     });
   }
 }
