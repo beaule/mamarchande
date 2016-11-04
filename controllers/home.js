@@ -48,9 +48,14 @@ function renderCategories(req,res){
     }); 
   }
   else{
+    var responseStream="{\"records\": [";
     base('categories').select().eachPage(function page(records, fetchNextPage) {
-        res.send(records);       
+        records.forEach(function(record) {
+            responseStream=responseStream+record+",";
+        });        
     });
+    responseStream=responseStream+"]}";
+    res.send(responseStream);    
   }
 }
 
