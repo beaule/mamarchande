@@ -71,7 +71,7 @@ function renderCategories(req,res){
       res.json(responseStream);    
 
 
-
+  }
 
 
    /* base('categories').select().eachPage(function page(records, fetchNextPage) {
