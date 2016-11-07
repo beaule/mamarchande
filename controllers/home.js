@@ -53,8 +53,12 @@ function renderCategories(req,res){
         records.forEach(function(record) {
           responseStream=responseStream+"{\"Id\":"+ record.get('Fields').get("Id")+",";
           responseStream=responseStream+"{\"Name\":"+ record.get('Fields').get("Named")+"},";          
-        });        
-    });
+        }); 
+        fetchNextPage();       
+    },function done(error) {
+    if (error) {
+        console.log(error);
+    }});
     responseStream=responseStream+"]}";
     res.json(responseStream);    
   }
