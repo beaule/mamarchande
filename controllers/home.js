@@ -51,6 +51,7 @@ function renderCategories(req,res){
     var responseStream="{\"records\": [";
     base('categories').select().eachPage(function page(records, fetchNextPage) {
         records.forEach(function(record) {
+          responseStream=responseStream+JSON.stringify(record);
           responseStream=responseStream+"{\"Id\":"+ record.get('Fields').get("Id")+",";
           responseStream=responseStream+"{\"Name\":"+ record.get('Fields').get("Named")+"},";          
         }); 
