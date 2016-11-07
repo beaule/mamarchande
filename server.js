@@ -52,6 +52,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.set('env',  process.env.ENVIRONMENT);
 app.set('port', process.env.PORT || process.env.DEFAULT_APP_HTTP_LISTENING_PORT);
+app.set('json spaces', 0);
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
