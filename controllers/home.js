@@ -49,7 +49,32 @@ function renderCategories(req,res){
   }
   else{
     var responseStream="{\"records\": [";
-    base('categories').select().eachPage(function page(records, fetchNextPage) {
+    base('categories').select({}).eachPage(function page(records, fetchNextPage) {
+
+          // This function (`page`) will get called for each page of records.
+
+          records.forEach(function(record) {
+            responseStream=responseStream+record.get('Id')              
+          });
+
+          // To fetch the next page of records, call `fetchNextPage`.
+          // If there are more records, `page` will get called again.
+          // If there are no more records, `done` will get called.
+          fetchNextPage();
+
+      }, function done(error) {
+          if (error) {
+              console.log(error);
+          }
+      });
+      responseStream=responseStream+"]}";
+      res.json(responseStream);    
+
+
+
+
+
+   /* base('categories').select().eachPage(function page(records, fetchNextPage) {
         records.forEach(function(record) {
           responseStream=responseStream+JSON.stringify(record);
           responseStream=responseStream+"{\"Id\":"+ record.get('Fields').get("Id")+",";
@@ -62,7 +87,7 @@ function renderCategories(req,res){
     }});
     responseStream=responseStream+"]}";
     res.json(responseStream);    
-  }
+  }*/
 }
 
 /**
